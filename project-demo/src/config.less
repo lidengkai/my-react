@@ -1,0 +1,44 @@
+@font-family: e(
+  "blinkmacsystemfont, 'Helvetica Neue', helvetica, segoe ui, arial, roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif"
+);
+@1px: e('1PX');
+
+@theme: #1890ff;
+@dark-color: #fff;
+@dark-bg: #001529;
+@light-color: rgba(0, 0, 0, 0.88);
+@light-bg: #f0f2f5;
+
+.clearfix() {
+  &::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    clear: both;
+  }
+}
+
+.ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ellipsis(@line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;
+  overflow: hidden;
+}
+
+.font-family() {
+  font-family: @font-family;
+}
+
+.font-family(@font) {
+  font-family: @font, @font-family;
+}
+
+.no-select() {
+  user-select: none;
+}

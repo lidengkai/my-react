@@ -1,0 +1,19 @@
+<script>
+  !(function (window) {
+    'use strict';
+
+    var $APP_NAME = '<%= $APP_NAME %>';
+    var $APP_VERSION = '<%= $APP_VERSION %>';
+    var $APP_MODE = '<%= $APP_MODE %>';
+    var $APP_ENV = '<%= $APP_ENV %>';
+
+    var u = navigator.userAgent;
+
+    var ios = /\(i[^;]+;( U;)? CPU.+Mac OS X/i.test(u);
+    var android = /android/i.test(u);
+    var iPhone = /iPhone/i.test(u);
+    var iPad = /iPad/i.test(u);
+    var wx = /MicroMessenger/i.test(u);
+    var wxWork = wx && /wxwork/i.test(u);
+  })(window);
+</script>

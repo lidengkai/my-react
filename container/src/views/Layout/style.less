@@ -1,0 +1,69 @@
+@import '@/index.less';
+
+.page-root {
+  width: 100%;
+  height: 100%;
+
+  &.collapsed {
+    .page-sider .logo .default {
+      width: 60px;
+    }
+  }
+}
+
+.page-sider {
+  background-color: #001529;
+  height: 100%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0px 3px 0 rgba(0, 0, 0, 0.3);
+
+  .logo {
+    padding: 12px 0;
+
+    .default {
+      width: 152px;
+      height: 40px;
+      background-color: @theme;
+      line-height: 40px;
+      font-size: 24px;
+      margin: 0 auto;
+      text-align: center;
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .content {
+    flex: 1;
+    overflow: auto;
+  }
+
+  .menu {
+    background-color: transparent;
+  }
+}
+
+.page-container {
+  height: 100%;
+  overflow: auto;
+
+  .content {
+    min-width: 678px;
+    min-height: 100%;
+    background-color: #f0f2f5;
+  }
+
+  .header {
+    background-color: inherit;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    padding: 0 24px;
+
+    .right {
+      float: right;
+    }
+  }
+}

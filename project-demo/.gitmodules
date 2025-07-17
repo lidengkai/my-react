@@ -1,0 +1,3 @@
+[submodule "project-demo/my-components"]
+	path = my-components
+	url = git@github.com:lidengkai/my-components.git
