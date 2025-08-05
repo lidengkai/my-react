@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -19,6 +20,7 @@ module.exports = merge(baseConfig, {
       resourceRegExp: /^\.\/locale$/,
       contextRegExp: /moment$/,
     }),
+    new CleanWebpackPlugin(),
     report && new BundleAnalyzerPlugin(),
     gzip && new CompressionPlugin(),
   ].filter(Boolean),
